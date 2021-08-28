@@ -4,4 +4,11 @@
 #  Пример палиндрома: 12321
 
 def palindrome(number):
-    pass
+    is_palindrome = True
+    for i in range(len(number)):
+        if number[i] != number[-1-i]:
+            is_palindrome = False
+    if is_palindrome:
+        return 'The number is a palindrome'
+    else:
+        return 'The number is not a palindrome'
